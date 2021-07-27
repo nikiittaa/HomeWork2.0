@@ -16,12 +16,12 @@ public class MapPopulationCensus {
         while (true){
             String city = mapPopulationCensus.reader.readLine();
             if(city.isEmpty()){
-                mapPopulationCensus.printCity();
+                mapPopulationCensus.printSurname();
                 break;
             }
             String surname = mapPopulationCensus.reader.readLine();
             if(surname.isEmpty()){
-                mapPopulationCensus.printCity();
+                mapPopulationCensus.printSurname();
                 break;
             }
             mapPopulationCensus.family.put(city, surname);
@@ -29,10 +29,10 @@ public class MapPopulationCensus {
         }
     }
 
-    private void printCity(){
+    private void printSurname(){
         try {
-            String city = reader.readLine();
-            System.out.println(family.get(city));
+            String surname = reader.readLine();
+            System.out.println(family.get(surname));
         } catch (IOException e) {
             e.printStackTrace();
         }
